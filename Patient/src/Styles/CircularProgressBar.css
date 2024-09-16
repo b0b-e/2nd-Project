@@ -1,0 +1,17 @@
+.circular-progress-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px; 
+  height: 100px; 
+  position: relative;
+}
+
+.circular-progress-bar {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
+

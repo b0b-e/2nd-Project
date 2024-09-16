@@ -1,0 +1,46 @@
+.super-progress{
+    position: absolute;
+    top:15%;bottom:50px;
+    left:0;right:0; 
+}
+.progress-report{
+    margin:5px;
+}
+.progress-container{
+    height:30%;
+    margin-top:20px;
+    display: flex;
+    justify-content: space-around;
+}
+.ovr, .goal{
+    background-color: rgb(235, 235, 235);
+    height: 100%;
+    width:180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.score-goal, .score-ovr{
+    box-sizing: border-box;
+}
+.label{
+    margin-top:5px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+.chart{
+margin:15px;
+margin-top:25px;
+}
+
+@media (max-width: 450px) {
+    .label{
+        font-size:25px;
+    }
+  }

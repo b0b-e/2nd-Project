@@ -1,0 +1,58 @@
+.mid{
+    position:absolute;
+    top:15%;
+    bottom:50px;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    left:0;right:0;
+    margin:0px 0px;
+    border:1px solid red;
+  }
+  .patient-summary{
+    font-size: 2em;
+    padding:5px;
+    font-weight: 500;
+  }
+
+  .topic{
+    border-radius: 7px;
+    padding:5px;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+  }
+
+  .info-grid{
+    padding:5px;
+    font-size: 20px;
+    margin:0px 2px;
+  }
+  .info-grid{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+}
+.info-tag{
+  font-weight: 600;
+}
+.info-box{
+  display: flex;
+  flex-direction: row;
+  gap:5px;
+  
+  border-radius: 6px;
+  padding:4px;
+  align-items: top;
+}
+.ovr-chart{
+  width:100%;
+}
+.ovr-chart-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#ovr{
+  display: flex;
+  align-items: center;
+  margin-right:4px;
+}
