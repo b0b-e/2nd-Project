@@ -36,7 +36,9 @@
 }
 .chart{
 margin:15px;
+margin-left: 0px;
 margin-top:25px;
+
 }
 
 @media (max-width: 450px) {
