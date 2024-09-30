@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Patient</title>
+    <link rel="stylesheet" href="patient-reg.css">
+</head>
+<body>
+    <div class="topic1">
+        <div class="heading">Personal Information</div>
+        <div class="sub-topic1">
+            <div class="enter">
+                <div class="placeholder">
+                    FIRST NAME
+                </div>
+                <input type="text" placeholder="First Name">
+            </div>
+            <div class="enter">
+                <div class="placeholder">
+                    MIDDLE NAME
+                </div>
+                <input type="text" placeholder="Middle Name (If any)">
+            </div>
+            <div class="enter">
+                <div class="placeholder">
+                    LAST NAME
+                </div>
+                <input type="text" placeholder="Last Name">
+            </div>
+        </div>
+        <div class="sub-topic2">
+            <div class="enter">
+                <div class="placeholder">
+                    DATE OF BIRTH
+                </div>
+                <input type="text" placeholder="DD/MM/YYYY">
+            </div>
+            <div class="enter">
+                <div class="placeholder">GENDER</div>
+                    <div class="choices">
+                        <label>
+                            <input type="radio" name="gender" value="male" required>
+                            Male
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female" required>
+                            Female
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="other" required>
+                            Other
+                        </label>
+                    </div>
+    </div>
+    </div>
+    <div class="sub-topic3">
+        <div class="enter">
+            <div class="placeholder">
+                CONTACT NUMBER
+                </div>
+                <input type="text" placeholder="Contact Number">
+        </div>
+        <div class="enter">
+            <div class="placeholder">
+                EMERGENCY CONTACT NUMBER
+                </div>
+                <input type="text" placeholder="Emergency Contact">
+                <input type="text" placeholder="Relation With Patient">
+                
+        </div>
+    </div>
+    <div class="sub-topic4">
+        <div class="enter">
+            <div class="placeholder">
+                RESIDENTIAL ADDRESS
+                </div>
+                <input type="text" id="address" placeholder="Residential Address"
+                style="width: 500px;height: 40px;
+                text-align:top;">
+        </div>
+    </div>
+    <div class="sub-topic5">
+    <div class="enter">
+        <div class="placeholder">
+            PIN CODE
+            </div>
+            <input type="number" id="address" placeholder="Pin Code">
+    </div>
+    </div>
+    </div>
+    <div class="topic2">
+        <div class="heading">Medical Information</div>
+        <div class="sub-topic1">
+            <div class="enter">
+                <div class="placeholder">
+                    PREVIOUS DIAGNOSIS
+                </div>
+                <input type="text" placeholder="Previous Diagnosis (If any)">
+            </div>
+            </div>
+            <div class="sub-topic2">
+                <div class="enter">
+                    <div class="placeholder">
+                        ONGOING MEDICATION
+                    </div>
+                    <input type="text" placeholder="(If any) (Seperate using ',')">
+                </div>
+                </div>
+                <div class="sub-topic2">
+                    <div class="enter">
+                        <div class="placeholder">
+                            PREVIOUS THERAPY PLANS?
+                        </div>
+                        <div class="choices">
+                            <label>
+                                <input type="radio" name="gender" value="YES" required onclick="previousTherapy(value)">
+                                YES
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="NO" required
+                                onclick="previousTherapy(value)">
+                                NO
+                            </label>
+                        </div>
+                    </div>
+                    <div class="enter duration" >
+                        
+                    </div>
+                    <div class="enter effect">
+                       
+                    </div>
+                    </div>
+        </div>
+        <div class="topic3">
+            <div class="heading">Insurance Information</div>
+            <div class="sub-topic1">
+                <div class="enter">
+                    <div class="placeholder">
+                        INSURANCE PROVIDER
+                    </div>
+                    <input type="text" placeholder="Insurance Provider">
+                </div>
+                </div>
+                <div class="sub-topic2">
+                    <div class="enter">
+                        <div class="placeholder">
+                            POLICY NUMBER
+                        </div>
+                        <input type="text" placeholder="Insurance Policy Number">
+                    </div>
+                </div>
+                <div class="sub-topic2">
+                    <div class="enter">
+                        <div class="placeholder">
+                            POLICY HOLDER NAME
+                        </div>
+                        <input type="text" placeholder="Policy  Holder Name">
+                    </div>
+                </div>
+                </div>
+                <div class="topic1">
+                    <div class="sub-topic1">
+                        <div class="enter">
+                            <div class="placeholder">
+                                PREFERED THERAPIST
+                            </div>
+                            <input type="search" placeholder="Prefered Therapist">
+                        </div>
+                        <div class="enter">
+                            <div class="placeholder">
+                                REFERRAL SOURCE
+                            </div>
+                            <input type="text" placeholder="Source of referral (If any)">
+                        </div>
+                    </div>
+                    </div>
+<!--<div class="topic2">
+    <div class="sub-topic2">
+    <div class="enter">
+    <label for="states">Select State:</label>
+    <select id="states" name="states">
+        <option value="Andhra Pradesh">Andhra Pradesh</option>
+        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+        <option value="Assam">Assam</option>
+        <option value="Bihar">Bihar</option>
+        <option value="Chhattisgarh">Chhattisgarh</option>
+        <option value="Goa">Goa</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Haryana">Haryana</option>
+        <option value="Himachal Pradesh">Himachal Pradesh</option>
+        <option value="Jharkhand">Jharkhand</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Madhya Pradesh">Madhya Pradesh</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="Manipur">Manipur</option>
+        <option value="Meghalaya">Meghalaya</option>
+        <option value="Mizoram">Mizoram</option>
+        <option value="Nagaland">Nagaland</option>
+        <option value="Odisha">Odisha</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="Sikkim">Sikkim</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Telangana">Telangana</option>
+        <option value="Tripura">Tripura</option>
+        <option value="Uttar Pradesh">Uttar Pradesh</option>
+        <option value="Uttarakhand">Uttarakhand</option>
+        <option value="West Bengal">West Bengal</option>
+        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+        <option value="Chandigarh">Chandigarh</option>
+        <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Lakshadweep">Lakshadweep</option>
+        <option value="Puducherry">Puducherry</option>
+    </select>
+    </div>
+    </div>
+    </div>
+    -->  
+    <div class="button">
+        <a href="#" id="register-btn">Register</a>
+        <a href="#" onclick="clearForm()">Clear Form</a>
+    </div>
+    
+    <!-- Confirmation Message -->
+    <div id="confirmation-message" class="confirmation hidden">
+        Patient has been registered successfully!<br>
+        <a href="dashboard.html" id="return-dashboard-btn">Return to Dashboard</a>
+    </div>
+    
+    
+</body>
+<script>
+function previousTherapy(option) {
+    let duration = document.querySelector('.duration');
+    let effect = document.querySelector('.effect');
+    if (option === "YES") {
+        console.log(option);
+        duration.innerHTML = `
+        <div class="placeholder">
+            THERAPY DURATION
+        </div>
+        <input type='text' placeholder='Months'>
+        `;
+        effect.innerHTML = `
+        <div class="placeholder">
+            PROGRESS MADE
+        </div>
+        <input type='text' placeholder='Progress'>
+        `;
+    }
+    if (option === "NO") {
+        console.log(option);
+        duration.innerHTML = ``;
+        effect.innerHTML = '';
+    }
+}
+
+// Register button functionality
+document.getElementById("register-btn").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+
+    // Show confirmation message
+    const confirmationMessage = document.getElementById("confirmation-message");
+    confirmationMessage.classList.remove("hidden");
+
+    // Hide confirmation message after 3 seconds
+    setTimeout(function() {
+        confirmationMessage.classList.add("hidden");
+    }, 3000);
+});
+
+
+</script>
+</html>

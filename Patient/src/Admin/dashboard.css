@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+}
+.dash{
+    position: absolute;
+    top:0;width:100%;
+    height: 50px;
+    font-size: 2rem;
+    font-weight: 700;
+    border-bottom:1px solid black ;
+}
+.body-dashboard{
+    position: absolute;
+    top:50px;
+    height:100%;width: 100%;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+    width: 100%;
+    font-size: 1.2rem;
+}
+.placeholder{
+    font-size: 1.3rem;
+    font-weight: 700;
+}

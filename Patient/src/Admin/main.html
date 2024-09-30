@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="super">
+        <div class="sidebar">
+            <div class="branding">
+                MNEMONICS
+            </div>
+            <div class="menu">
+                <div class="upper">
+                    <a href="javascript:void(0);" class="action" onclick="loadContent('dashboard.html')">Dashboard</a>
+                    <a href="javascript:void(0);" class="action" onclick="loadContent('register.html')">Register</a>
+                    <a href="javascript:void(0);" class="action" onclick="loadContent('assign.html')">Assign</a>
+                    <a href="javascript:void(0);" class="action" onclick="loadContent('generateReport.html')">Generate Report</a>
+                    <a href="javascript:void(0);" class="action" onclick="loadContent('manageAccounts.html')">Manage Accounts</a>
+                    <a href="javascript:void(0);" class="action" onclick="loadContent('feedbacks.html')">Feedbacks</a>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="head">
+                <div class="inner-left">
+                    <div class="search">
+                        <div class="search-bar">
+                            <input type="text" placeholder="Search...">
+                        </div>
+                        <div class="svg-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill=""><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-right">
+                    <!--<div class="notifications">3</div>-->
+                    <div class="profile">
+                        <div class="img-container">
+                            <img class="avatar" src="../assets/Avatar-No-Background.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="viewer">
+                <div id="viewer-content">
+                    <p>Select an option from the menu to see the content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loadContent(page) {
+            fetch(page)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('viewer-content').innerHTML = data;
+    
+                    // Reattach the registration button event listener
+                    const registerBtn = document.getElementById("register-btn");
+                    if (registerBtn) {
+                        registerBtn.addEventListener("click", function(event) {
+                            event.preventDefault(); // Prevent default anchor behavior
+    
+                            // Show confirmation message
+                            const confirmationMessage = document.getElementById("confirmation-message");
+                            confirmationMessage.classList.remove("hidden");
+    
+                            // Hide confirmation message after 3 seconds
+                            setTimeout(function() {
+                                confirmationMessage.classList.add("hidden");
+                            }, 3000);
+                        });
+                    }
+    
+                    // Reattach event listener for the Return to Dashboard button
+                    const returnBtn = document.getElementById("return-to-dashboard-btn");
+                    if (returnBtn) {
+                        returnBtn.addEventListener("click", function() {
+                            loadContent('dashboard.html'); // Load dashboard content into viewer
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+        }
+    
+        // Event delegation for the entire viewer-content area
+        document.getElementById('viewer-content').addEventListener('click', function(event) {
+            if (event.target.matches('#register-btn')) {
+                event.preventDefault(); // Prevent default anchor behavior
+    
+                // Show confirmation message
+                const confirmationMessage = document.getElementById("confirmation-message");
+                confirmationMessage.classList.remove("hidden");
+    
+                // Hide confirmation message after 3 seconds
+                setTimeout(function() {
+                    confirmationMessage.classList.add("hidden");
+                }, 3000);
+            }
+        });
+    
+        function previousTherapy(option) {
+            let duration = document.querySelector('.duration');
+            let effect = document.querySelector('.effect');
+            if (option === "YES") {
+                console.log(option);
+                duration.innerHTML = `
+                <div class="placeholder">
+                    THERAPY DURATION
+                </div>
+                <input type='text' placeholder='Months'>
+                `;
+                effect.innerHTML = `
+                <div class="placeholder">
+                    PROGRESS MADE
+                </div>
+                <input type='text' placeholder='Progress'>
+                `;
+            }
+            if (option === "NO") {
+                console.log(option);
+                duration.innerHTML = ``;
+                effect.innerHTML = '';
+            }
+        }
+    
+        // Attach event listener to the Return to Dashboard button after DOM content is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const returnBtn = document.getElementById("return-to-dashboard-btn");
+            if (returnBtn) {
+                returnBtn.addEventListener("click", function() {
+                    loadContent('dashboard.html'); // Load dashboard content into viewer
+                });
+            }
+        });
+    </script>
+    
+    
+
+</body>
+</html>

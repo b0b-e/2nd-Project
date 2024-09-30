@@ -1,0 +1,138 @@
+body,html{
+    margin:0;padding:0;
+    width:100dvw;
+    height: 100dvh;
+    font-family: Oswald;
+    background-color: lightgray;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+input:focus{
+outline: none;
+}
+.super{
+    width:100%; height:100%;
+    display: flex;
+    position: relative;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    background-color:#1FC593;
+    height:80px;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 2px 0.5px rgba(0,0,0,0.15);
+}
+.inner-left{
+border-bottom: 1px solid black;
+display: flex;
+}
+.svg-container{
+    height: 100%;
+    position: relative;
+}
+.img-container{
+    height: 100%;
+}
+.img-container img{
+
+    height: 100%;
+}
+.search{
+    display: flex;
+}
+.search input{
+    border: none;
+    background-color: inherit;
+}
+.inner-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.profile{
+    border-radius: 50%;
+    width: 50px;
+    height: 60px;
+}
+.notifications{
+position: absolute;
+top:0px;
+right: 0px;
+font-size: 11px;
+background-color: rgb(179, 240, 67);
+padding: 0px 5px;
+border-radius: 50%;
+}
+.middle 
+{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    left:20%;
+    width:80%;
+    top:0;bottom:0;
+}
+.sidebar{
+    width:20%;height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 3px 0px 5px 0.2px rgba(0,0,0,0.15);
+    z-index: 1;
+    position: relative;
+    position: fixed;
+}
+.branding{
+    height: 80px;
+    background-color:#1FC593;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.menu{
+    width: 100%;
+    padding: 0px 5px;
+    box-sizing: border-box;
+}
+.upper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap:25px;
+    width: 100%;
+    padding:10px 0px;
+}
+.action{
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    border:1px solid #1FC593;
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.viewer{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    position: relative;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}

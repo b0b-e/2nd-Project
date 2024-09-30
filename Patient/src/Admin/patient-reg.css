@@ -1,0 +1,75 @@
+input{
+    padding:5px;
+}
+option{
+    padding: 5px;
+}
+.topic1,.topic2,.topic3,.topic4{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+.heading{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.sub-topic1,.sub-topic2,.sub-topic3,.sub-topic4,.sub-topic5{
+    display: flex;
+    gap:10px;
+}
+.choices{
+    margin-top:5px;
+}
+label{
+    font-size: 1.1em;
+}
+.button{
+    height:50px;
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.button a{
+    background-color: #1FC593;
+    padding: 10px;
+    border-radius: 30px;
+}
+body{
+    position: relative;
+}
+/* Confirmation message styles */
+.confirmation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1FC593;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    display: inline-block;
+    z-index: 100;
+}
+
+/* Hidden class to toggle the visibility */
+.hidden {
+    display: none;
+}
+#return-dashboard-btn {
+    display: inline-block;
+    margin-top: 10px;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#return-dashboard-btn:hover {
+    background-color: white;
+    color: black; /* Change as needed */
+}

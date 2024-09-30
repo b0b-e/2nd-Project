@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="super-reg">
+        <a href="javascript:void(0);" class="patient" onclick="loadContent('patient-reg.html')">
+            <img class="hov" src="../assets/1430453.png" alt="Description of SVG">
+                <svg class="add" xmlns="http://www.w3.org/2000/svg" height="100px" viewBox="0 -960 960 960" width="100px" fill=""><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+          <div class="text">
+                PATIENT
+            </div>
+        </a>
+        <div class="therapist">
+            <img src="../assets/doctor-svgrepo-com.svg" alt="Description of SVG">
+            <svg class="add" xmlns="http://www.w3.org/2000/svg" height="100px" viewBox="0 -960 960 960" width="100px" fill=""><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+            <div class="text">
+                THERAPIST
+            </div>
+        </div>
+        <div class="supervisor">
+            <img src="../assets/supervisor.jpg" alt="Description of SVG">
+            <svg class="add" xmlns="http://www.w3.org/2000/svg" height="100px" viewBox="0 -960 960 960" width="100px" fill=""><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+            <div class="text">
+                SUPERVISOR
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function loadContent(page) {
+        fetch(page)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('viewer-content').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    }
+</script>
+</html>
